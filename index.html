@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
+    
     <title>Dice Generator</title>
 </head>
 <body>
@@ -14,34 +14,35 @@
         <h1>Let's Play Dice</h1>
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select Sides</option>
-                    <option value="1">2</option>
-                    <option value="2">4</option>
-                    <option value="3">6</option>
+                <select class="form-select" id="side-selector" onchange="testFunction()" aria-label="Default select example">
+                    <option value="0" selected>Select Sides</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="10">10</option>
                   </select>
             </div>
             <div class="col-sm-4">
-                <select class="form-select" onchange="displayDice()" id="my-selector1" aria-label="Default select example">
-                    <option selected>Select No. of Dice</option>
+                <select class="form-select" onchange="testFunction()" id="my-selector1" aria-label="Default select example">
+                    <option value="0" selected>Select No. of Dice</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                   </select>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div id= "first-dice" class=" margin10 dice col-sm-3 border bg-light justify-content-center">
-                <p id="diceNumber1">4</p>
+            <div id= "first-dice" class=" margin10 dice col-sm-3 justify-content-center">
+                <p id="diceNumber1">6</p>
             </div>
-            <div id="second-dice" class=" margin10 dice col-sm-3 border bg-light justify-content-center">
+            <div id="second-dice" class=" margin10 dice col-sm-3 justify-content-center">
                 <p id="diceNumber2">6</p>
             </div>
         </div>
         <div class="margin10">
-            <button id="oneDice" class="btn btn-primary margin10" type="submit" onclick="rollDice1(1,5)">Roll Dice</button>
-            <button id="twoDice" class="btn btn-primary margin10" type="submit" onclick="rollAllDice(1,7)">Roll All Dice</button>
+            <button id="oneDice" disabled class="btn btn-primary margin10" type="submit" onclick="rollDice1(1,10)">Roll Dice</button>
+            <button id="twoDice" disabled class="btn btn-primary margin10" type="submit" onclick="rollAllDice(1,7)">Roll All Dice</button>
         </div>
 
     </div> <!--Main Continer div-->
+    <script src="script.js"></script>
 </body>
 </html>

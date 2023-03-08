@@ -9,5 +9,15 @@ h1, .margin10{
     margin:10px;
 }
 #diceNumber1, #diceNumber2{
-    font-size:60px;
+    font-size:50px;
+    padding: 50px;
+    display:flex;
+    justify-content: center;
+    border: 1px solid gray;
+    margin:50px auto;
+    border-radius: 10px;
+    background-color: rgb(160, 196, 228);
+   
 }
+
+    
