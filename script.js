@@ -1,20 +1,11 @@
 
 
 
-//This function rolls dice if only one dice selected
-function rollDice1(min, max) {
-    document.getElementById("diceNumber1").innerHTML = 
-    Math.floor(Math.random() * (max-min)+min);
-}
-
-//This function rolls Dice if two dice selected
-function rollAllDice(min, max){
-
-    document.getElementById("diceNumber1").innerHTML = 
-    Math.floor(Math.random() * (max-min)+min);
-
-    document.getElementById("diceNumber2").innerHTML = 
-    Math.floor(Math.random() * (max-min)+min);
+//This function rolls the dice (generates random number)
+function rollDice(sides) {
+    document.getElementById("diceNumber1").innerHTML = Math.floor(Math.random() * sides + 1);
+    document.getElementById("diceNumber2").innerHTML = Math.floor(Math.random() * sides + 1);
+    
 }
 
 // This function select and displays the number of dice to be rolled

@@ -37,9 +37,11 @@
                 <p id="diceNumber2">6</p>
             </div>
         </div>
+
+        <!--Buttons to roll the dice-->
         <div class="margin10">
-            <button id="oneDice" disabled class="btn btn-primary margin10" type="submit" onclick="rollDice1(1,10)">Roll Dice</button>
-            <button id="twoDice" disabled class="btn btn-primary margin10" type="submit" onclick="rollAllDice(1,7)">Roll All Dice</button>
+            <button id="oneDice" disabled class="btn btn-primary margin10" type="submit" onclick="rollDice(document.getElementById('side-selector').value)">Roll Dice</button>
+            <button id="twoDice" disabled class="btn btn-primary margin10" type="submit" onclick="rollDice(document.getElementById('side-selector').value)">Roll All Dice</button>
         </div>
 
     </div> <!--Main Continer div-->
